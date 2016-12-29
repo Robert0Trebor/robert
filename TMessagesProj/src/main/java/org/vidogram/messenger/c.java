@@ -24,32 +24,32 @@ public class c
 
   public static Bitmap a(int paramInt1, int paramInt2, Bitmap.Config paramConfig)
   {
-    Object localObject;
-    if (Build.VERSION.SDK_INT < 21)
-    {
-      localObject = new BitmapFactory.Options();
-      ((BitmapFactory.Options)localObject).inDither = true;
-      ((BitmapFactory.Options)localObject).inPreferredConfig = paramConfig;
-      ((BitmapFactory.Options)localObject).inPurgeable = true;
-      ((BitmapFactory.Options)localObject).inSampleSize = 1;
-      ((BitmapFactory.Options)localObject).inMutable = true;
-      byte[] arrayOfByte = (byte[])b.get();
-      arrayOfByte[76] = (byte)(paramInt2 >> 8);
-      arrayOfByte[77] = (byte)(paramInt2 & 0xFF);
-      arrayOfByte[78] = (byte)(paramInt1 >> 8);
-      arrayOfByte[79] = (byte)(paramInt1 & 0xFF);
-      localObject = BitmapFactory.decodeByteArray(arrayOfByte, 0, arrayOfByte.length, (BitmapFactory.Options)localObject);
-      Utilities.pinBitmap((Bitmap)localObject);
-      ((Bitmap)localObject).setHasAlpha(true);
-      ((Bitmap)localObject).eraseColor(0);
-    }
-    while (true)
-    {
-      if ((paramConfig == Bitmap.Config.ARGB_8888) || (paramConfig == Bitmap.Config.ARGB_4444))
-        ((Bitmap)localObject).eraseColor(0);
-      return localObject;
-      localObject = Bitmap.createBitmap(paramInt1, paramInt2, paramConfig);
-    }
+    try {
+      Object localObject;
+      if (Build.VERSION.SDK_INT < 21) {
+        localObject = new BitmapFactory.Options();
+        ((BitmapFactory.Options) localObject).inDither = true;
+        ((BitmapFactory.Options) localObject).inPreferredConfig = paramConfig;
+        ((BitmapFactory.Options) localObject).inPurgeable = true;
+        ((BitmapFactory.Options) localObject).inSampleSize = 1;
+        ((BitmapFactory.Options) localObject).inMutable = true;
+        byte[] arrayOfByte = (byte[]) b.get();
+        arrayOfByte[76] = (byte) (paramInt2 >> 8);
+        arrayOfByte[77] = (byte) (paramInt2 & 0xFF);
+        arrayOfByte[78] = (byte) (paramInt1 >> 8);
+        arrayOfByte[79] = (byte) (paramInt1 & 0xFF);
+        localObject = BitmapFactory.decodeByteArray(arrayOfByte, 0, arrayOfByte.length, (BitmapFactory.Options) localObject);
+        Utilities.pinBitmap((Bitmap) localObject);
+        ((Bitmap) localObject).setHasAlpha(true);
+        ((Bitmap) localObject).eraseColor(0);
+      }
+      while (true) {
+        if ((paramConfig == Bitmap.Config.ARGB_8888) || (paramConfig == Bitmap.Config.ARGB_4444))
+          ((Bitmap) localObject).eraseColor(0);
+        return localObject;
+        localObject = Bitmap.createBitmap(paramInt1, paramInt2, paramConfig);
+      }
+    }catch (Exception e){}
   }
 
   public static Bitmap a(Bitmap paramBitmap, int paramInt1, int paramInt2, int paramInt3, int paramInt4)

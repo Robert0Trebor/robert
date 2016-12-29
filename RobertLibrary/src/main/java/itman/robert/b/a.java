@@ -32,7 +32,7 @@ public class a extends ColorDrawable
     this.c.setColor(getColor());
     paramCanvas.drawCircle(f, f, f - this.a * 1.5F, this.d);
     paramCanvas.drawCircle(f, f, f - this.a * 1.5F, this.c);
-    paramCanvas.drawCircle(f, f, f - this.a, this.b);
+    //paramCanvas.drawCircle(f, f, f - this.a, this.b);
   }
 
   public void setColor(int paramInt)

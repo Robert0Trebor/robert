@@ -73,6 +73,11 @@ public class m
               localObject = a().b(1);
               continue;
             }
+            if (u.e((g.q)localObject))
+            {
+              localObject = a().b(4);
+              continue;
+            }
             if (u.g((g.q)localObject))
             {
               localObject = a().b(2);

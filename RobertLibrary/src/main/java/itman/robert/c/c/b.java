@@ -1,5 +1,7 @@
 package itman.robert.c.c;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import itman.robert.c.a;
@@ -15,6 +17,14 @@ public class b
   {
     if (paramInt == 0)
       return -16711936;
+    try
+    {
+      localObject = ((Context)localObject).getPackageManager().getPackageInfo(((Context)localObject).getPackageName(), 0);
+      return localObject;
+    }
+    catch (PackageManager.NameNotFoundException localNameNotFoundException)
+    {
+    }
     return a.a().getResources().getColor(paramInt);
   }
 }

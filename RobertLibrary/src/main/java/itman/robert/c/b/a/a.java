@@ -42,17 +42,29 @@ public class a extends d
     }
   }
 
-  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  public boolean onitemSelected(int a)
   {
-    switch (paramMenuItem.getItemId())
+    switch (onitemSelected.getItemId())
     {
-    default:
-      return super.onOptionsItemSelected(paramMenuItem);
-    case 16908332:
+      default:
+        return super.onOptionsItemSelected(a);
+      case 16908332:
     }
     finish();
     return true;
   }
+
+  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+{
+  switch (paramMenuItem.getItemId())
+  {
+    default:
+      return super.onOptionsItemSelected(paramMenuItem);
+    case 16908332:
+  }
+  finish();
+  return true;
+}
 }
 
 /* Location:           G:\programs\dex2jar-2.0\vidogram-dex2jar.jar
