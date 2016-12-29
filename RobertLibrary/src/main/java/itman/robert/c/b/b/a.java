@@ -14,6 +14,7 @@ public abstract class a<T> extends BaseAdapter
   public a(Context paramContext, List<T> paramList)
   {
     this.b = paramContext;
+
     this.c = paramList;
     this.a = LayoutInflater.from(paramContext);
   }

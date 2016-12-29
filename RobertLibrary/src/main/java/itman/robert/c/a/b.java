@@ -4,6 +4,7 @@ import com.google.android.gms.gcm.a;
 
 public abstract class b extends a
 {
+
   private static final String a = b.class.getSimpleName();
 }
 

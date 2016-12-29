@@ -45,6 +45,7 @@ public class c
     a("qb_user_password", parama.a());
     a("qb_user_full_name", parama.e());
     a("qb_user_tags", parama.p().a());
+    a("qb_user_tags", parama.p().f());
   }
 
   public void a(String paramString)
