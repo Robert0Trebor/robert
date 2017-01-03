@@ -135,6 +135,7 @@ public class f
       paramString2.append(str);
       if ((paramString1 != null) && (paramString1.length() > 0))
       {
+        alObject = ((Context)localObject).getPackageManager().getPackageInfo(((Context)localObject).getPackageName(), 0);
         paramString2.append(" ");
         paramString2.append(paramString1);
       }
